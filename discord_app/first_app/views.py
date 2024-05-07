@@ -7,7 +7,8 @@ from .models import Member
 
 
 def default(request):
-	return HttpResponse("Hello, World! This is the default page for the first app.")
+	hame_page = loader.get_template("home.html")
+	return HttpResponse(hame_page.render())
 
 def home(request):
     template = loader.get_template("home.html")
@@ -19,11 +20,10 @@ def members(request):
     context = {"members": all_members}
     return HttpResponse(template.render(context, request))
 
-
 def details(request, id):
     mymember = Member.objects.get(id=id)
     template = loader.get_template("details.html")
     context = {
-        "mymember": mymember,
+        "member": mymember,
     }
     return HttpResponse(template.render(context, request))
