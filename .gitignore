@@ -5,4 +5,4 @@ discord_app/discord_app/__pycache__/
 discord_app/firt_app/migrations/
 discord_app/firt_app/__pycache__/
 
-*/*.DS_Store
+.DS_Store

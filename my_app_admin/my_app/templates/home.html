@@ -6,10 +6,12 @@
 
 
 {% block content %}
-  <h1>Hell Madrid, We love latin vibes</h1>
-
-  <h3>Members</h3>
-  
-  <p>Check out all our <a href="members/">members</a></p>
+	<h1>Hello Madrid, We love latin vibes</h1>
+	<h3>Members</h3>
+	
+	<p>Check out all our <a href="/members">members</a></p>
+	{% with href="/admin"%}
+		<a href="{{href}}">Admin pannel</a>
+	{% endwith %}
   
 {% endblock %}
